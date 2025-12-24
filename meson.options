@@ -1,0 +1,52 @@
+# Proof of Position build options
+
+option('tests',
+  type: 'boolean',
+  value: true,
+  description: 'Build test suite')
+
+option('benchmarks',
+  type: 'boolean',
+  value: false,
+  description: 'Build benchmarks')
+
+option('sanitizers',
+  type: 'combo',
+  choices: ['none', 'address', 'thread', 'undefined'],
+  value: 'none',
+  description: 'Enable sanitizers')
+
+option('slot_duration_us',
+  type: 'integer',
+  value: 100000,
+  min: 10000,
+  max: 1000000,
+  description: 'Slot duration in microseconds (default 100ms)')
+
+option('gossip_interval_us',
+  type: 'integer',
+  value: 20000,
+  min: 1000,
+  max: 50000,
+  description: 'Gossip interval in microseconds (default 20ms)')
+
+option('positions_per_slot',
+  type: 'integer',
+  value: 100000,
+  min: 1000,
+  max: 10000000,
+  description: 'Number of positions per slot (default 100000)')
+
+option('max_peers',
+  type: 'integer',
+  value: 200,
+  min: 10,
+  max: 1000,
+  description: 'Maximum number of peer connections')
+
+option('commit_pool_max',
+  type: 'integer',
+  value: 1000000,
+  min: 10000,
+  max: 10000000,
+  description: 'Maximum commits in pool')
