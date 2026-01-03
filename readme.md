@@ -186,7 +186,7 @@ Nodes gossip continuously. Full mesh. Everyone talks to everyone. Commits propag
 
 Theres no block producer because theres no block.
 
-Theres no consensus because theres nothing to agree on. The math already decided. Every node runs the same computation on the same inputs and gets the same output. Verification replaces agreement.
+Theres no "consensus" because theres nothing to agree on. The math already decided. Every node runs the same computation on the same inputs and gets the same output. Verification replaces agreement.
 
 What about latency?
 
@@ -706,13 +706,13 @@ Agreement on finality replaced by convergence. Regional confirmation is VDF-boun
 
 Agreement on time replaced by computation. Every node computes the same sequential hash chain. VDF_step(n) has exactly one value. Disagreement is impossible. Time is computed, not observed. No NTP. No GPS. No external dependency.
 
-Nothing magical. No new cryptography. SHA3-256. ML-DSA. AES-GCM. LM-OTS. IBLT. STARK. Reed-Solomon erasure coding. Standard primitives, post-quantum ready. No new assumptions hidden. One explicit assumption stated clearly. No consensus eliminated by handwaving. Consensus eliminated by making it unnecessary.
+Nothing magical. No new cryptography. SHA3-256. ML-DSA. AES-GCM. LM-OTS. IBLT. STARK. Reed-Solomon erasure coding. Standard primitives, post-quantum ready. No new assumptions hidden. One explicit assumption stated clearly. No consensus eliminated by handwaving. "Consensus" eliminated by making it unnecessary.
 
 The actual innovation.
 
 Recognizing that ordering consensus exists because systems couldnt prove what transactions exist. If you can prove availability via receipts that contain data plus work plus verifiable timing, you dont need to vote on inclusion. If inclusion is deterministic, ordering is deterministic. If ordering is deterministic, execution is deterministic. If execution is deterministic, state is deterministic.
 
-Recognizing that time consensus exists because systems relied on external clocks. If every node computes the same sequential hash chain, time becomes deterministic. VDF_step(n) is the same everywhere because SHA3 is deterministic. No clock sync needed. No NTP trust needed. Time is math.
+Recognizing that time "consensus" exists because systems relied on external clocks. If every node computes the same sequential hash chain, time becomes deterministic. VDF_step(n) is the same everywhere because SHA3 is deterministic. No clock sync needed. No NTP trust needed. Time is math.
 
 Recognizing that sybil resistance can be per-action, not per-identity. Sequential PoW per receipt means sybil cost scales linearly with impact. No reputation to farm. No age to accumulate. Just: did you do the work for this specific receipt?
 
@@ -760,7 +760,7 @@ No clock sync assumption. Time is computed. VDF chain is deterministic. Every no
 
 Not a single vote cast. Not a single leader elected. Not a single block produced. Not a single ordering authority. Not a single transaction visible before position locks. Not a single trust assumption that drains wallets. Not a single replay possible. Not a single execution in unexpected state. Not a single unnecessary sequential execution. Not a single ongoing mining for ordering. Not a single token staked. Not a single ordering fork possible. Not a single quantum vulnerability. Not a single permanent catastrophic fork. Not a single external time source. Not a single fake receipt possible. Not a single reputation to farm. Not a single age advantage. Not a single chunk assignment grindable. Not a single entropy source that fails alone. Not a single VDF bucket claim unfalsifiable. Not a single finality claim dishonest.
 
-Everyone said you need consensus. Agreement. Authority. Coordination. Visibility. Trusted parties. Witnesses. Validators. Sequential execution. Staking. Mining. Capital. Honest majority. Synchronized clocks.
+Everyone said you need "consensus". Agreement. Authority. Coordination. Visibility. Trusted parties. Witnesses. Validators. Sequential execution. Staking. Mining. Capital. Honest majority. Synchronized clocks.
 
 You dont.
 
@@ -770,7 +770,7 @@ Proof of Position.
 
 The first deterministic optimistic replicated state machine with receipt-attested availability, VDF-sequenced time, and convergence-bounded finalization.
 
-Not because consensus is hidden. Because consensus is unnecessary.
+Not because "consensus" is hidden. Because "consensus" is unnecessary.
 
 Not because parallelism is optimized. Because parallelism is structural.
 
